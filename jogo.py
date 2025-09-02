@@ -25,84 +25,63 @@ quebra5 = True
 quebra6 = True
 quebra7 = True
 
-while erro <= (chances): # enquanto não chega na quantidade de erros, repetir o código.
+while erro <= (chances) or quebra0 == True: # enquanto não chega na quantidade de erros, repetir o código.
 
     letra = str(input("Tente adivinhar uma letra!")) # obtém a letra que o usuário quer adivinhar.
     
+# reconhecimento de letra.
     while quebra0 == True:
-        while quebra0 == True: # reconhecimento de letra.
-            if letra != palavra[0]:
-                print("Você escolheu uma letra incorreta!") 
-                quebra1 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra0 = False
+        if letra != palavra[0]:
+            print("Você escolheu uma letra incorreta!") 
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra1 == True:
-            if letra != palavra[1]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra1 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra1 = False
+        if letra != palavra[1]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra2 == True:
-            if letra != palavra[2]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra2 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra2 = False
+        if letra != palavra[2]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra3 == True:
-            if letra != palavra[3]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra3 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra3 = False
+        if letra != palavra[3]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra4 == True:
-            if letra != palavra[4]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra4 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra4 = False
-        
-        while quebra5 == True:
-            if letra != palavra[5]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra5 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra5 = False
+        if letra != palavra[4]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
+            
+        if letra != palavra[5]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra6 == True:
-            if letra != palavra[6]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra6 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra6 = False
+        if letra != palavra[6]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        while quebra7 == True:
-            if letra != palavra[7]: 
-                print("Você escolheu uma letra incorreta!")
-                quebra7 = False
-            else:
-                print("Você escolheu uma letra correta!")
-                quebra = False
-                quebra7 = False
+        if letra != palavra[7]: 
+            print("Você escolheu uma letra incorreta!")
+        else:
+            print("Você escolheu uma letra correta!")
+            quebra0 = False
 
-        break # encerra o escaneamento/reconhecimento.
+        quebra0 = False
+
+# encerra o escaneamento/reconhecimento.
 
     # troca a letra escolhida pela letra da palavra
 
@@ -130,7 +109,7 @@ while erro <= (chances): # enquanto não chega na quantidade de erros, repetir o
     elif letra == palavra[7]:
         palavra.replace(letra, palavracen[7])
 
-    print(palavracen, ".")
+    print(palavra, ".")
     erro = erro + 1 # adiciona 1 no contador de erros, para quando chegar na quantidade de chances, encerrar o código.
 
 print("acabou suas chances!")
